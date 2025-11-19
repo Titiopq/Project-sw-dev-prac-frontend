@@ -27,6 +27,14 @@ export default function RegisterPage() {
 
   const onSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+    
+    // Email format validation
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailRegex.test(form.email)) {
+      setError("Please enter a valid email format (example@domain.com)");
+      return;
+    }
+    
     try {
       await api.post("/auth/register", form);
       alert("Register success");
