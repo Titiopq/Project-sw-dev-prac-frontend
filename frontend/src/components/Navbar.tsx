@@ -6,7 +6,8 @@ export default function Navbar() {
 
   return (
     <header className="navbar" role="banner">
-      <div className="navbar-left">
+      <div className="navbar-inner">
+        <div className="navbar-left">
         <Link to="/" className="brand">Exhibition Booth Booking</Link>
 
         <nav className="nav-links" aria-label="Main navigation">
@@ -14,9 +15,9 @@ export default function Navbar() {
           {user && <Link to="/bookings">Bookings</Link>}
           {user && isAdmin && <Link to="/exhibitions/new">New Exhibition</Link>}
         </nav>
-      </div>
+        </div>
 
-      <div className="navbar-right">
+        <div className="navbar-right">
         {user ? (
           <>
             <span className="user-greeting">Hi, {user.name}</span>
@@ -28,6 +29,7 @@ export default function Navbar() {
             <Link to="/register" className="btn btn-primary">Register</Link>
           </>
         )}
+        </div>
       </div>
     </header>
   );
