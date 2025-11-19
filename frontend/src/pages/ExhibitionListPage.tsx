@@ -99,7 +99,9 @@ export default function ExhibitionListPage() {
                         <button className="btn btn-outline" onClick={() => remove(ex._id)}>Delete</button>
                       </>
                     )}
-                    <Link to={`/bookings/new`} className="btn btn-primary">Book Booth</Link>
+                    {!isAdmin && (
+                      <Link to={`/bookings/new`} className="btn btn-primary">Book Booth</Link>
+                    )}
                   </div>
                 </div>
               </div>

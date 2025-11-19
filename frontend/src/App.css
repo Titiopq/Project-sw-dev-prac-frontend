@@ -7,9 +7,9 @@
 .form-row{display:flex;flex-direction:column;gap:0.5rem}
 .muted{color:var(--muted)}
 
-/* Exhibition thumbnail styling: fixed box and cover fit */
+/* Exhibition thumbnail styling: rectangle format */
 .exhibition-thumb{
-	width:120px;
+	width:180px;
 	height:120px;
 	flex-shrink:0;
 	object-fit:cover;
@@ -18,5 +18,5 @@
 }
 
 @media (max-width:600px){
-	.exhibition-thumb{width:90px;height:90px}
+	.exhibition-thumb{width:135px;height:90px}
 }

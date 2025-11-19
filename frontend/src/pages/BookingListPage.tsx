@@ -43,7 +43,13 @@ export default function BookingListPage() {
       <div className="list">
         {bookings.map((b) => (
           <div key={b._id} className="card">
-            <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start' }}>
+            <div style={{ display: 'flex', gap: 12, alignItems: 'flex-start' }}>
+              {b.exhibition?.posterPicture ? (
+                <img src={b.exhibition.posterPicture} alt={`${b.exhibition.name} poster`} className="exhibition-thumb" />
+              ) : (
+                <div className="exhibition-thumb" style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', color: 'var(--muted)', background: 'rgba(255,255,255,0.01)' }}>No image</div>
+              )}
+
               <div style={{ flex: 1 }}>
                 <h3 style={{ margin: 0 }}>{b.exhibition?.name}</h3>
                 <p className="muted" style={{ margin: '0.4rem 0' }}>{b.exhibition?.venue}</p>
