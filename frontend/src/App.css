@@ -1,0 +1,22 @@
+.app-container{max-width:1100px;margin:0 auto}
+.card{padding:1rem;border-radius:10px}
+.page-title{font-size:1.4rem;margin:0 0 0.5rem 0}
+.list{display:flex;flex-direction:column;gap:1rem}
+/* Ensure cards span full width when in a vertical list */
+.card{width:100%}
+.form-row{display:flex;flex-direction:column;gap:0.5rem}
+.muted{color:var(--muted)}
+
+/* Exhibition thumbnail styling: fixed box and cover fit */
+.exhibition-thumb{
+	width:120px;
+	height:120px;
+	flex-shrink:0;
+	object-fit:cover;
+	border-radius:8px;
+	background:rgba(255,255,255,0.02);
+}
+
+@media (max-width:600px){
+	.exhibition-thumb{width:90px;height:90px}
+}
